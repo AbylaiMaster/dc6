@@ -26,6 +26,7 @@ The dataset is used to train a machine learning model to predict customer churn.
 ### 1. Upload dataset to EMR Master Node
 ```bash
 scp -i vockey.pem Churn_Modelling.csv hadoop@<master-public-dns>:/home/hadoop/
+```
 
 2. Copy dataset to HDFS
 hdfs dfs -mkdir -p /user/hadoop/churn_input
