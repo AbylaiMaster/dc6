@@ -35,14 +35,25 @@ hdfs dfs -put Churn_Modelling.csv /user/hadoop/churn_input/
 spark-submit --master yarn --deploy-mode client churn_pipeline.py
 
 The pipeline performs the following steps:
+
 Load data from HDFS
+
 Encode categorical features (Geography, Gender)
+
 Assemble features into a vector
+
 Scale features
+
 Train Logistic Regression model
+
 Make predictions
+
 Evaluate accuracy
+
 4. Notes
+
 Accuracy will be printed at the end of the job, e.g.:
+
 Accuracy: 0.7929
+
 Feature ablation experiments can be performed by removing categorical features and rerunning the pipeline.
